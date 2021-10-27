@@ -1,0 +1,17 @@
+<head><link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"></head>
+<div class="todos">
+    <form (submit)="addTodo()"autocomplete="off">
+        <input 
+            type="text"
+            name="inputtodo"
+            placeholder="Enter todo...!"
+            class="todo-input"
+            [(ngModel)]="inputTodo">
+            <input type="submit" value="Add" class="todo-submit">
+    </form>
+    <div  *ngFor="let todo of todos; let i=index;"class="todo {{ (todo.completed ? 'done' : '') }}">
+        <div class="id">{{i}}</div>
+        <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+        <button class="delete"(click)="deleteTodo(i)">Remove</button>
+    </div>
+</div>
