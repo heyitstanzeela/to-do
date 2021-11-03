@@ -11,7 +11,11 @@ export class TodosComponent implements OnInit {
  
   todos!:Todo[];
   inputTodo:string="";
+<<<<<<< HEAD
   showUpdate:boolean=false;
+=======
+showUpdate:boolean=false;
+>>>>>>> 5941fd133b596f3b4f080f63fbdbcbc35d80520d
   selectedItemIndex!:any;
   constructor() {  }
 
@@ -46,6 +50,17 @@ this.todos.splice(id,1);
    });
 
    this.inputTodo="";
+   editTodo(id:number){
+this.inputTodo=this.todos[id].content;
+this.showUpdate=true;
+this.selectedItemIndex=id;
+ }
+ updateTodoItem(){
+this.todos[this.selectedItemIndex].content=this.inputTodo;
+this.showUpdate=false;
+this.inputTodo="";
+this.selectedItemIndex="";
+}
  }
  editTodo(id:number){
 this.inputTodo=this.todos[id].content;

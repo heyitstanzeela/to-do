@@ -8,13 +8,21 @@
             class="todo-input"
             [(ngModel)]="inputTodo">
             <input type="submit" value="Add" class="todo-submit" *ngIf="!showUpdate">
+<<<<<<< HEAD
             <input type="button" value="Update" class="todo-submit" (click)="updateTodoItem()" *ngIf="showUpdate" >
+=======
+      <input type="button" value="Update" class="todo-submit" (click)="updateTodoItem()" *ngIf="showUpdate" >
+>>>>>>> 5941fd133b596f3b4f080f63fbdbcbc35d80520d
     </form>
     
     <div  *ngFor="let todo of todos; let i=index;"class="todo {{ (todo.completed ? 'done' : '') }}">
         <div class="id">{{i}}</div>
         <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+<<<<<<< HEAD
         <button class="edit"(click)="editTodo(i)">Edit</button>
+=======
+       <button class="edit"(click)="editTodo(i)">Edit</button>
+>>>>>>> 5941fd133b596f3b4f080f63fbdbcbc35d80520d
         <button class="delete"(click)="deleteTodo(i)">Remove</button>
     </div>
 </div>

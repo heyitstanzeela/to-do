@@ -99,8 +99,12 @@ input[type=text] {
     background-image: linear-gradient(to bottom, #FE4880, #FE4880);
     text-decoration: none;
   }
+<<<<<<< HEAD
 
   .edit{
+=======
+.edit{
+>>>>>>> 5941fd133b596f3b4f080f63fbdbcbc35d80520d
     background: #FE4880;
     padding-right: 10px;
     background-image: -webkit-linear-gradient(top, #FE4880, #2980b9);
@@ -130,4 +134,7 @@ input[type=text] {
     text-decoration: none;
   }
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5941fd133b596f3b4f080f63fbdbcbc35d80520d
