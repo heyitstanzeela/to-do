@@ -99,4 +99,35 @@ input[type=text] {
     background-image: linear-gradient(to bottom, #FE4880, #FE4880);
     text-decoration: none;
   }
+
+  .edit{
+    background: #FE4880;
+    padding-right: 10px;
+    background-image: -webkit-linear-gradient(top, #FE4880, #2980b9);
+    background-image: -moz-linear-gradient(top, #FE4880, #2980b9);
+    background-image: -ms-linear-gradient(top, #FE4880, #2980b9);
+    background-image: -o-linear-gradient(top, #FE4880, #2980b9);
+    background-image: linear-gradient(to bottom, #FE4880, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    margin-right: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border:none;
+  }
+  
+  .edit:hover {
+    background: #FE4880;
+    background-image: -webkit-linear-gradient(top, #FE4880, #FE4880);
+    background-image: -moz-linear-gradient(top, #FE4880, #FE4880);
+    background-image: -ms-linear-gradient(top, #FE4880, #FE4880);
+    background-image: -o-linear-gradient(top, #FE4880, #FE4880);
+    background-image: linear-gradient(to bottom, #FE4880, #FE4880);
+    text-decoration: none;
+  }
+  
   

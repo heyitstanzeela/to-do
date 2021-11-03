@@ -11,15 +11,17 @@ export class TodosComponent implements OnInit {
  
   todos!:Todo[];
   inputTodo:string="";
+  showUpdate:boolean=false;
+  selectedItemIndex!:any;
   constructor() {  }
 
   ngOnInit(): void {
    this.todos=[
      {
-       content:'',
+       content:'hi',
        completed:false
      },{
-      content:'',
+      content:'this is a todo-list',
       completed:false
      }
    ]
@@ -32,7 +34,9 @@ export class TodosComponent implements OnInit {
     })
   }
  deleteTodo (id:number){
-this.todos=this.todos.filter((v,i)=>i!==id);
+//this.todos=this.todos.filter((v,i)=>i!==id);
+this.todos.splice(id,1);
+
  }
 
  addTodo(){
@@ -43,4 +47,16 @@ this.todos=this.todos.filter((v,i)=>i!==id);
 
    this.inputTodo="";
  }
+ editTodo(id:number){
+this.inputTodo=this.todos[id].content;
+this.showUpdate=true;
+this.selectedItemIndex=id;
+ }
+ updateTodoItem(){
+this.todos[this.selectedItemIndex].content=this.inputTodo;
+this.showUpdate=false;
+this.inputTodo="";
+this.selectedItemIndex="";
+}
+
 }

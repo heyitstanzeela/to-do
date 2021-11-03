@@ -7,11 +7,14 @@
             placeholder="Enter todo...!"
             class="todo-input"
             [(ngModel)]="inputTodo">
-            <input type="submit" value="Add" class="todo-submit">
+            <input type="submit" value="Add" class="todo-submit" *ngIf="!showUpdate">
+            <input type="button" value="Update" class="todo-submit" (click)="updateTodoItem()" *ngIf="showUpdate" >
     </form>
+    
     <div  *ngFor="let todo of todos; let i=index;"class="todo {{ (todo.completed ? 'done' : '') }}">
         <div class="id">{{i}}</div>
         <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+        <button class="edit"(click)="editTodo(i)">Edit</button>
         <button class="delete"(click)="deleteTodo(i)">Remove</button>
     </div>
 </div>
